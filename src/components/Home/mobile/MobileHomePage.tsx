@@ -72,44 +72,44 @@ export const MobileHomePage: React.FC = () => {
               gutterBottom
               sx={{ color: "rgba(255,255,255,0.88)", fontStyle: "italic" }}
             >
-              Conectando a saúde
+              Triagem inteligente
               <br />
-              pública ao futuro!
+              para Saúde Pública
             </Typography>
 
             <Typography variant="body1" fontWeight={400} gutterBottom sx={{ color: "#FFFFFF" }}>
               Mais especialistas, menos
               <br />
-              filas:{" "}
+              filas!{" "}
               <Box component="span" sx={{ color: "#FFFFFF", fontStyle: "italic", fontWeight: 700 }}>
-                sua cidade inovando na <br /> saúde pública!
+                É a sua cidade economizando <br /> em Recursos Públicos
               </Box>
             </Typography>
           </Box>
         </motion.div>
 
-       <Box textAlign="left" mt={4}>
-  <a
-    href="https://wa.me/554788992915"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: "inline-block",
-      padding: "12px 32px",
-      borderRadius: "12px",
-      backgroundColor: "#04D77B",
-      color: "#000C1E",
-      fontWeight: "bold",
-      fontStyle: "italic",
-      textDecoration: "none",
-      textAlign: "center",
-      fontSize: "1rem",
-      position: "relative",
-      zIndex: 2, // garante que o clique funcione
-    }}
-  >
-    Saiba mais
-  </a>
+        <Box textAlign="left" mt={4}>
+          <a
+            href="https://wa.me/554788992915"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              padding: "12px 32px",
+              borderRadius: "12px",
+              backgroundColor: "#04D77B",
+              color: "#000C1E",
+              fontWeight: "bold",
+              fontStyle: "italic",
+              textDecoration: "none",
+              textAlign: "center",
+              fontSize: "1rem",
+              position: "relative",
+              zIndex: 2, // garante que o clique funcione
+            }}
+          >
+            Agende uma reunião
+          </a>
         </Box>
 
         {/* Fundo */}
@@ -153,7 +153,7 @@ export const MobileHomePage: React.FC = () => {
           </Typography>
 
           <Typography
-            variant="body2"
+            variant="h5"
             fontWeight={400}
             gutterBottom
             sx={{ color: "rgba(255,255,255,0.88)", lineHeight: 1.8, mb: 4 }}
@@ -175,7 +175,7 @@ export const MobileHomePage: React.FC = () => {
             />
           </Box>
 
-          <Typography variant="body2" fontWeight={400} sx={{ color: "#FFFFFF", lineHeight: 1.8 }}>
+          <Typography variant="h5" fontWeight={400} sx={{ color: "#FFFFFF", lineHeight: 1.8 }}>
             Nossa plataforma oferece um{" "}
             <Box component="span" sx={{ fontStyle: "italic", fontWeight: 700 }}>
               dashboard em tempo real
@@ -268,16 +268,6 @@ export const MobileHomePage: React.FC = () => {
       {/* RESULTADOS + IMAGENS */}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={resultadosVariant}>
         <Box sx={{ px: 2, mt: 7 }}>
-          <Box sx={{ textAlign: "center", mb: 10 }}>
-            <Image
-              src="/medicos-02.png"
-              alt="médicos"
-              width={1500}
-              height={800}
-              style={{ width: "100%", height: "auto" }}
-            />
-          </Box>
-
           <Typography
             variant="h5"
             fontWeight={700}
@@ -302,6 +292,7 @@ export const MobileHomePage: React.FC = () => {
               variant="contained"
               sx={{
                 mt: 0,
+                mb: 10,
                 borderRadius: 3,
                 backgroundColor: "#04D77B",
                 color: "#000C1E",
@@ -311,8 +302,17 @@ export const MobileHomePage: React.FC = () => {
               }}
               onClick={openWhatsApp}
             >
-              Entre já em contato
+              Saiba mais
             </Button>
+          </Box>
+          <Box sx={{ textAlign: "center", mb: 10 }}>
+            <Image
+              src="/medicos-02.png"
+              alt="médicos"
+              width={1500}
+              height={800}
+              style={{ width: "100%", height: "auto" }}
+            />
           </Box>
         </Box>
       </motion.div>
