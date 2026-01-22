@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import Script from "next/script";
+import { proximaNova } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.descomplicamedicina.com.br"),
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={proximaNova.variable}>
       <head>
         {/* Google Analytics (gtag.js) */}
         <Script
