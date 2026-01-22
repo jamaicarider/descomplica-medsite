@@ -1,7 +1,35 @@
 import "./globals.css";
+import type { Metadata } from "next";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import Script from "next/script";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.descomplicamedicina.com.br"),
+  title: "Triagem Médica Inteligente para Saúde Pública com IA | Descomplica",
+  description:
+    "Reduz filas no SUS com triagem médica inteligente baseada em Inteligência Artificial e especialistas. Mais eficiência, menos desperdício. Agende uma demonstração.",
+  keywords: [
+    "triagem médica",
+    "IA",
+    "inteligência artificial",
+    "SUS",
+    "saúde pública",
+    "descomplica",
+    "medicina",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://www.descomplicamedicina.com.br",
+    siteName: "Descomplica Medicina",
+    title: "Triagem Médica Inteligente para Saúde Pública com IA | Descomplica",
+    description:
+      "Reduz filas no SUS com triagem médica inteligente baseada em Inteligência Artificial e especialistas. Mais eficiência, menos desperdício. Agende uma demonstração.",
+  },
+  robots: "index, follow",
+  authors: [{ name: "Descomplica" }],
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
