@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     title: "Triagem Médica Inteligente para Saúde Pública com IA | Descomplica",
     description:
       "Reduz filas no SUS com triagem médica inteligente baseada em Inteligência Artificial e especialistas. Mais eficiência, menos desperdício. Agende uma demonstração.",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Descomplica Medicina - Triagem Inteligente",
+      },
+    ],
   },
   robots: "index, follow",
   authors: [{ name: "Descomplica" }],
