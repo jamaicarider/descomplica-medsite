@@ -37,9 +37,16 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   authors: [{ name: "Descomplica" }],
+  verification: {
+    google: "rML-GoVx2gQKgXzUvOyxfwdfGxp29nlAPrumwq39RuE",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR">
       <head>
