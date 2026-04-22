@@ -48,7 +48,7 @@ export const MobileHomePage: React.FC = () => {
         display: { xs: "block", md: "none" },
         background: "linear-gradient(180deg, #000C1E 60%)",
         color: "white",
-        fontFamily: "var(--font-proxima-nova)",
+        fontFamily: "var(--font-montserrat)",
       }}
     >
       {/* HERO SECTION */}

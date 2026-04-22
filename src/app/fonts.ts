@@ -1,23 +1,9 @@
-import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 
-export const proximaNova = localFont({
-  src: [
-    {
-      path: "./fonts/proxima-nova/Fontspring-DEMO-proximanova-regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/proxima-nova/Fontspring-DEMO-proximanovacond-bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./fonts/proxima-nova/Fontspring-DEMO-proximanovacond-mediumit.woff2",
-      weight: "500",
-      style: "italic",
-    },
-  ],
-  variable: "--font-proxima-nova",
+export const montserrat = Montserrat({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-montserrat",
   display: "swap",
 });

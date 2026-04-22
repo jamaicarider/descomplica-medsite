@@ -4,7 +4,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "var(--font-proxima-nova), Arial, sans-serif",
+    fontFamily: "var(--font-montserrat), Arial, sans-serif",
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
@@ -21,14 +21,14 @@ const theme = createTheme({
     body2: { fontSize: 14, fontWeight: 400 },
 
     h1: {
-      fontFamily: "var(--font-proxima-nova), Arial, sans-serif",
+      fontFamily: "var(--font-montserrat), Arial, sans-serif",
       fontSize: 32,
       fontWeight: 700,
       "@media (min-width:600px)": { fontSize: 48 },
     },
 
     h2: {
-      fontFamily: "var(--font-proxima-nova), Arial, sans-serif",
+      fontFamily: "var(--font-montserrat), Arial, sans-serif",
       fontSize: 24,
       fontWeight: 700,
       "@media (min-width:600px)": { fontSize: 32 },

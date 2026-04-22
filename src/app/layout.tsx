@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import Script from "next/script";
-import { proximaNova } from "./fonts";
+import { montserrat } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.descomplicamedicina.com.br"),
@@ -96,7 +96,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={proximaNova.variable}>
+      <body className={montserrat.variable}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

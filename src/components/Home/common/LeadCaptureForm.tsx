@@ -137,7 +137,7 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
         onSubmit={handleSubmit}
         sx={{
           p: compact ? 1.5 : 2,
-          borderRadius: 2,
+          borderRadius: 4,
           background: "linear-gradient(180deg, #31E6B7 0%, #06D87B 100%)",
           boxShadow: "0 10px 28px rgba(0, 0, 0, 0.28)",
         }}
@@ -147,7 +147,6 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
           required
           fullWidth
           size="small"
-          placeholder="Nome completo"
           value={formData.fullName}
           onChange={handleChange("fullName")}
           sx={textFieldStyles}
@@ -158,7 +157,6 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
           fullWidth
           size="small"
           type="tel"
-          placeholder="Telefone para contato"
           value={formData.phone}
           onChange={handlePhoneChange}
           inputProps={{
@@ -174,7 +172,6 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
           fullWidth
           size="small"
           type="email"
-          placeholder="Email"
           value={formData.email}
           onChange={handleChange("email")}
           sx={textFieldStyles}
@@ -184,7 +181,6 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
           required
           fullWidth
           size="small"
-          placeholder="Cidade"
           value={formData.city}
           onChange={handleChange("city")}
           sx={textFieldStyles}
