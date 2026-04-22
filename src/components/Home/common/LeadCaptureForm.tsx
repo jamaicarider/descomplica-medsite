@@ -268,7 +268,7 @@ const textFieldStyles = {
     height: 32,
     fontSize: "0.85rem",
     color: "#00142E",
-    fontFamily: "Arial, sans-serif",
+    fontFamily: "var(--font-montserrat), Arial, sans-serif",
     fontVariantLigatures: "none",
   },
   "& .MuiInputBase-input": {
