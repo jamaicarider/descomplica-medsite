@@ -29,7 +29,13 @@ const DesktopHomePage: React.FC = () => {
 <Box sx={{ position: "relative", py: 12, bgcolor: "#000C1E" }}>
   {/* Fundo gradiente */}
   <Box sx={{ position: "absolute", inset: 0, zIndex: 1 }}>
-    <Image src="/gradiente-medico.png" alt="Gradiente fundo" fill style={{ objectFit: "cover" }} />
+    <Image
+      src="/gradiente-medico.png"
+      alt="Gradiente fundo"
+      fill
+      sizes="100vw"
+      style={{ objectFit: "cover" }}
+    />
   </Box>
 
   {/* Link para WhatsApp */}

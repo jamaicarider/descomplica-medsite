@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import Script from "next/script";
+import { proximaNova } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.descomplicamedicina.com.br"),
@@ -34,6 +35,10 @@ export const metadata: Metadata = {
         alt: "Descomplica Medicina - Triagem Inteligente",
       },
     ],
+  },
+  icons: {
+    icon: "/og-image.svg",
+    shortcut: "/og-image.svg",
   },
   robots: "index, follow",
   authors: [{ name: "Descomplica" }],
@@ -85,8 +90,13 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WBP4V8DG');
           `}
         </Script>
+
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+        />
       </head>
-      <body>
+      <body className={proximaNova.variable}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

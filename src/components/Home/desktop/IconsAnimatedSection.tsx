@@ -75,7 +75,13 @@ export default function IconsAnimatedSection() {
             ref={circleRef}
             style={{ position: "absolute", inset: 0, transform: "scale(0.8)" }}
           >
-            <Image src="/circulo-fundo.png" alt="Fluxo da consulta" fill style={{ objectFit: "contain" }} />
+            <Image
+              src="/circulo-fundo.png"
+              alt="Fluxo da consulta"
+              fill
+              sizes="(max-width: 768px) 80vw, 481px"
+              style={{ objectFit: "contain" }}
+            />
           </div>
 
           {(() => {

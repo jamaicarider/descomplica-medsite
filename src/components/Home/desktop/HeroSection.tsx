@@ -1,15 +1,16 @@
 "use client";
 
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import LeadCaptureForm from "../common/LeadCaptureForm";
 
 export default function HeroSection() {
     return (
         <>
             {/* HERO SECTION */}
-      <Box component="section" sx={{ position: "relative", width: "100%", minHeight: { md: "620px", lg: "720px" }, overflow: "hidden" }}>
+      <Box component="section" sx={{ position: "relative", width: "100%", minHeight: "100vh", overflow: "hidden" }}>
         <Box sx={{
           position: "absolute",
           inset: 0,
@@ -24,7 +25,7 @@ export default function HeroSection() {
             background: "linear-gradient(90deg, rgba(0,12,30,0.85) 0%, rgba(0,12,30,0.6) 40%, rgba(0,12,30,0.15) 70%)",
           },
         }} />
-        <Box sx={{ position: "relative", zIndex: 2, maxWidth: 1280, mx: "auto", px: { md: 8, lg: 12 }, height: "100%", display: "flex", alignItems: "center", gap: 18 }}>
+        <Box sx={{ position: "relative", zIndex: 2, maxWidth: 1280, mx: "auto", px: { md: 8, lg: 12 }, minHeight: "100vh", display: "flex", alignItems: "center", gap: 18 }}>
           
           {/* Texto Hero */}
           <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} style={{ flex: 1 }}>
@@ -43,27 +44,7 @@ export default function HeroSection() {
                   É a sua cidade economizando em Recursos Públicos
                 </Box>
               </Typography>
-              <Button
-                component="a"
-                href="https://wa.me/554788992915"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="contained"
-                sx={{
-                  mt: 1,
-                  borderRadius: 2,
-                  backgroundColor: "#04D77B",
-                  color: "#000C1E",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                  px: 4,
-                  py: 1.5,
-                  fontSize: "1rem",
-                  "&:hover": { backgroundColor: "#03b36a" },
-                }}
-              >
-                Agende uma reunião
-              </Button>
+              <LeadCaptureForm />
             </Box>
           </motion.div>
 

@@ -4,6 +4,7 @@ import { Box, Typography, Button, Stack, Link } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import { motion, easeOut } from "framer-motion";
+import LeadCaptureForm from "../common/LeadCaptureForm";
 
 const steps = [
   { icon: "/Inicio-da-consulta.png", text: "Início da consulta" },
@@ -51,7 +52,7 @@ export const MobileHomePage: React.FC = () => {
       }}
     >
       {/* HERO SECTION */}
-      <Box sx={{ position: "relative", px: 2, pt: 2, pb: 10 }}>
+      <Box sx={{ position: "relative", px: 2, pt: 2, pb: 10, minHeight: "100vh" }}>
         {/* Logo */}
         <Box sx={{ position: "absolute", top: 30, left: 16 }}>
           <Image
@@ -88,28 +89,8 @@ export const MobileHomePage: React.FC = () => {
           </Box>
         </motion.div>
 
-        <Box textAlign="left" mt={4}>
-          <a
-            href="https://wa.me/554788992915"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              padding: "12px 32px",
-              borderRadius: "12px",
-              backgroundColor: "#04D77B",
-              color: "#000C1E",
-              fontWeight: "bold",
-              fontStyle: "italic",
-              textDecoration: "none",
-              textAlign: "center",
-              fontSize: "1rem",
-              position: "relative",
-              zIndex: 2, // garante que o clique funcione
-            }}
-          >
-            Agende uma reunião
-          </a>
+        <Box textAlign="left" mt={2} sx={{ position: "relative", zIndex: 3 }}>
+          <LeadCaptureForm compact />
         </Box>
 
         {/* Fundo */}
@@ -338,6 +319,7 @@ export const MobileHomePage: React.FC = () => {
             src="/medico-texto.png"
             alt="Médico CTA"
             fill
+            sizes="100vw"
             style={{ objectFit: "contain", objectPosition: "center" }}
           />
         </Box>
