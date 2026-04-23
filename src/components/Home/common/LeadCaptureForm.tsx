@@ -140,7 +140,7 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
           fontSize: compact ? "0.86rem" : "0.96rem",
         }}
       >
-        Quer saber mais sobre nossas solucoes? Preencha seus dados que entraremos em contato!
+        Quer saber mais sobre nossas soluções? Preencha seus dados que entraremos em contato!
       </Typography>
 
       <Box

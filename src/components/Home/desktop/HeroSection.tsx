@@ -29,9 +29,9 @@ export default function HeroSection() {
           
           {/* Texto Hero */}
           <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} style={{ flex: 1 }}>
-            <Box sx={{ color: "white", pr: { md: 2, lg: 6 } }}>
+            <Box sx={{ color: "white", pr: { md: 2, lg: 6 }, pb: 4 }}>
               {/* LOGO ajustada para cima */}
-              <Box sx={{ mb: 15 }}>
+              <Box sx={{ mb: 10, mt: 4 }}>
                 <Image src="/descomplica-logo.png" alt="Descomplica" width={200} height={40} priority />
               </Box>
 
@@ -49,7 +49,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Médico Hero */}
-          <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }} style={{ flex: 1, display: "flex", justifyContent: "flex-end", alignItems: "center", position: "relative" }}>
+          <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }} style={{ flex: 1, display: "flex", justifyContent: "flex-end", alignItems: "flex-end", alignSelf: "flex-end", position: "relative" }}>
             <Box sx={{ position: "relative", zIndex: 2, width: { md: 300, lg: 630 } }}>
               <Image src="/medico-01.png" alt="Equipe médica" width={900} height={900} style={{ width: "100%", height: "auto", display: "block" }} priority />
             </Box>

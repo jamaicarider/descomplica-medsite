@@ -153,7 +153,7 @@ const DesktopHomePage: React.FC = () => {
     background: "linear-gradient(90deg, #36d492ff 0%, #3ef5acff 50%)",
     borderRadius: 3,
     position: "relative",
-    width: { xs: "100%", md: "60%" },
+    width: { xs: "100%", md: "70%" },
     height: 90, // altura menor que antes (era 150)
     px: 3,
     py: 0,
