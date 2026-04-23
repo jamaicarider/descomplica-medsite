@@ -78,6 +78,9 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
 
     setIsSubmitting(true);
 
+    // Abre a janela ANTES do await para preservar o gesto do usuario (mobile bloqueia popups apos async)
+    const whatsappWindow = window.open("about:blank", "_blank");
+
     try {
       const response = await fetch("/api/turnstile", {
         method: "POST",
@@ -90,6 +93,7 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
       const payload = (await response.json()) as { error?: string };
 
       if (!response.ok) {
+        whatsappWindow?.close();
         throw new Error(payload.error || "Nao foi possivel validar a seguranca do formulario.");
       }
 
@@ -101,7 +105,14 @@ export default function LeadCaptureForm({ compact = false }: LeadCaptureFormProp
         `*Cidade:* ${formData.city}`;
 
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
+
+      if (whatsappWindow) {
+        whatsappWindow.location.href = url;
+      } else {
+        // Fallback para quando o popup eh bloqueado (ex: Safari mobile)
+        window.location.href = url;
+      }
+
       setFormData(initialForm);
       submittedForm.reset();
     } catch (error) {
